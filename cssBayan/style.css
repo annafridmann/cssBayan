@@ -14,12 +14,18 @@ body{
 
 /* container style */
 
+.cont{
+    border: 1px solid #fff;
+    width: 80%;
+    margin: 0 auto;
+}
+
 .container{
     max-width: 500px;
     margin: 20px auto;
-    
-
 }
+
+
 
 .container-item{
     border: 1px solid #641fa4;
@@ -31,6 +37,14 @@ body{
     font-size: 14px;
     padding: 10px 15px;
 }
+
+#text1{
+    display: block;
+}
+#title1{
+    background-color: rgb(198, 135, 204);
+}
+
 .title{
     position: relative;
     display: block;
@@ -41,7 +55,7 @@ body{
 
 
 
-.title:after {
+/* .title::after {  
     content: "";
     display: block;
     border-style: solid;
@@ -53,16 +67,29 @@ body{
     position: absolute;
     top: 50%;
     right: 15px;
+} */
+
+#plus, #cross{ 
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
+.cont:hover #plus{
+    display: block;
+}
 
 
 /* при наведении мышки добавлять цвет и плавный переход + замедление*/
-.title:hover {
-    background-color: aqua;
-    transition: background 2s ease-out; 
-
+.title:hover #plus {
+    transition: background 2s ease-out;
+    color: #641fa4;
+    display: block;
 }
+
+
 .container-input{
     appearance: none; 
     position: absolute;
@@ -70,19 +97,57 @@ body{
     height: 0px;
 }
 
+.title:checked #plus{
+    display: none;
+}
+
+.title:checked #cross{
+    display: block;
+}
+
+
+/* START DEFAULT OPENED CONT */
+
+
 .container-input:checked ~ .text{
     display: block;
 }
-.container-input:checked ~ .title{
-    background-color: aqua;
+.container-input:checked ~ #text1{
+    display: none;
 }
 
-.container-input:checked ~ .title:after{
-    border-style: solid;
-    border-width: 0 7.5px 10px 7.5px;
-    border-color: transparent 
-    transparent #ad5453 transparent;
+.container-input:checked ~ #title1{
+    background-color: transparent;
 }
+
+.container-input ~ #title1 #plus{
+    display: none;
+}
+.container-input ~ #title1 #cross{
+    display: block;
+}
+.container-input:checked ~ #title1 #cross{
+    display: none;
+}
+
+
+
+.container-input:checked ~ #title1 #plus{
+    display: block;
+}
+
+/* END DEFAULT OPENED CONT */
+
+.container-input:checked ~ .title{
+    background-color: rgb(198, 135, 204);
+}
+.container-input:checked ~ .title #plus{
+    display: none;
+}
+.container-input:checked ~ .title #cross{
+    display: block;
+}
+
 
 .img1{
     display: block;

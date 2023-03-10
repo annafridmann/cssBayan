@@ -1,0 +1,94 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #e2d8ea;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+
+}
+
+/* container style */
+
+.container{
+    max-width: 500px;
+    margin: 20px auto;
+    
+
+}
+
+.container-item{
+    border: 1px solid #641fa4;
+    border-radius: 5px;
+}
+
+.text{
+    display: none;
+    font-size: 14px;
+    padding: 10px 15px;
+}
+.title{
+    position: relative;
+    display: block;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px 15px;
+}
+
+
+
+.title:after {
+    content: "";
+    display: block;
+    border-style: solid;
+    border-width: 10px 7.5px 0 7.5px;
+    border-color: #53ad68 
+    transparent transparent transparent;
+    transform: translateY(-50%);
+
+    position: absolute;
+    top: 50%;
+    right: 15px;
+}
+
+
+
+/* при наведении мышки добавлять цвет и плавный переход + замедление*/
+.title:hover {
+    background-color: aqua;
+    transition: background 2s ease-out; 
+
+}
+.container-input{
+    appearance: none; 
+    position: absolute;
+    width: 0px;
+    height: 0px;
+}
+
+.container-input:checked ~ .text{
+    display: block;
+}
+.container-input:checked ~ .title{
+    background-color: aqua;
+}
+
+.container-input:checked ~ .title:after{
+    border-style: solid;
+    border-width: 0 7.5px 10px 7.5px;
+    border-color: transparent 
+    transparent #ad5453 transparent;
+}
+
+.img1{
+    display: block;
+    margin: 0 auto;
+}
+.img2{
+    display: block;
+    margin: 0 auto;
+}

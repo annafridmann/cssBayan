@@ -55,20 +55,6 @@ body{
 
 
 
-/* .title::after {  
-    content: "";
-    display: block;
-    border-style: solid;
-    border-width: 10px 7.5px 0 7.5px;
-    border-color: #53ad68 
-    transparent transparent transparent;
-    transform: translateY(-50%);
-
-    position: absolute;
-    top: 50%;
-    right: 15px;
-} */
-
 #plus, #cross{ 
     display: none;
     position: absolute;

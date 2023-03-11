@@ -38,12 +38,12 @@ body{
     padding: 10px 15px;
 }
 
-#text1{
+/* #text4{ 
     display: block;
 }
-#title1{
+#title4{
     background-color: rgb(198, 135, 204);
-}
+} */
 
 .title{
     position: relative;
@@ -69,11 +69,11 @@ body{
 
 
 /* при наведении мышки добавлять цвет и плавный переход + замедление*/
-.title:hover #plus {
+.title:hover {
     transition: background 2s ease-out;
     color: #641fa4;
-    display: block;
-}
+} 
+
 
 
 .container-input{
@@ -92,45 +92,80 @@ body{
 }
 
 
-/* START DEFAULT OPENED CONT */
-
-
-.container-input:checked ~ .text{
+/* HOVER OVER ITEMS STARTS */
+#container5 ~ .text{
+    display: none;
+}
+#container5:hover ~ .text{
     display: block;
 }
-.container-input:checked ~ #text1{
-    display: none;
-}
-
-.container-input:checked ~ #title1{
-    background-color: transparent;
-}
-
-.container-input ~ #title1 #plus{
-    display: none;
-}
-.container-input ~ #title1 #cross{
-    display: block;
-}
-.container-input:checked ~ #title1 #cross{
-    display: none;
-}
-
-
-
-.container-input:checked ~ #title1 #plus{
+#container5:checked ~ .text{
     display: block;
 }
 
-/* END DEFAULT OPENED CONT */
+#container4 ~ .text{
+    display: none;
+}
+#container4:hover ~ .text{
+    display: block;
+}
+#container4:checked ~ .text{
+    display: block;
+}
 
-.container-input:checked ~ .title{
+#container3 ~ .text{
+    display: none;
+}
+#container3:hover ~ .text{
+    display: block;
+}
+#container3:checked ~ .text{
+    display: block;
+}
+
+#container2 ~ .text{
+    display: none;
+}
+#container2:hover ~ .text{
+    display: block;
+}
+#container2:checked ~ .text{
+    display: block;
+}
+
+#container1 ~ .text{
+    display: block;
+}
+#container1:hover ~ .text{
+    display: block;
+}
+#container1:checked ~ .text{
+    display: none;
+}
+
+/* HOVER OVER ITEMS END */
+
+
+
+.container-input:hover ~ .title{
     background-color: rgb(198, 135, 204);
 }
+.container-input:checked ~ .title{
+    background-color: rgb(45, 10, 48);
+    
+}
+
 .container-input:checked ~ .title #plus{
     display: none;
 }
 .container-input:checked ~ .title #cross{
+    display: block;
+}
+
+.container-input:hover ~ .title #plus{
+    display: none;
+}
+.container-input:hover ~ .title #cross{
     display: block;
 }
 

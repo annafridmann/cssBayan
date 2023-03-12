@@ -1,8 +1,120 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 70%;
     line-height: 1.5;
     background-color: #e2d8ea;
+}
+h1{
+    font-size:85%;
+    padding: 0.5rem;
+}
+.img1{
+    display: block;
+    margin: 0 auto;
+    height: 70%;
+    width: 70%;
+}
+.img2{
+    display: block;
+    margin: 0 auto;
+    height: 70%;
+    width: 70%;
+}
+.img3{
+    display: block;
+    margin: 0 auto;
+    height: 70%;
+    width: 70%;
+}
+.img4{
+    display: block;
+    margin: 0 auto;
+    height: 70%;
+    width: 70%;
+}
+.img5{
+    display: block;
+    margin: 0 auto;
+    height: 70%;
+    width: 70%;
+}
+
+
+@media (min-width: 51rem){
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 85%;
+        line-height: 1.5;
+        background-color: #e2d8ea;
+    }
+
+    .img1{
+        display: block;
+        margin: 0 auto;
+        size: 85%;
+    }
+    .img2{
+        display: block;
+        margin: 0 auto;
+        size: 85%;
+    }
+    .img3{
+        display: block;
+        margin: 0 auto;
+        size: 85%;
+    }
+    .img4{
+        display: block;
+        margin: 0 auto;
+        size: 85%;
+    }
+    .img5{
+        display: block;
+        margin: 0 auto;
+        size: 85%;
+    }
+    h1{
+        font-size:95%;
+        padding: 0.5rem;
+    }
+}
+
+@media (min-width: 120rem){
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 100%;
+        line-height: 1.5;
+        background-color: #e2d8ea;
+    }
+    .img1{
+        display: block;
+        margin: 0 auto;
+        size: 100%;
+    }
+    .img2{
+        display: block;
+        margin: 0 auto;
+        size: 100%;
+    }
+    .img3{
+        display: block;
+        margin: 0 auto;
+        size: 100%;
+    }
+    .img4{
+        display: block;
+        margin: 0 auto;
+        size: 100%;
+    }
+    .img5{
+        display: block;
+        margin: 0 auto;
+        size: 100%;
+    }
+    h1{
+        font-size:100%;
+        padding: 0.5rem;
+    }
 }
 
 *,
@@ -15,52 +127,38 @@ body{
 /* container style */
 
 .cont{
-    border: 1px solid #fff;
+    border: 0.1rem solid #fff;
     width: 80%;
     margin: 0 auto;
 }
 
 .container{
-    max-width: 500px;
-    margin: 20px auto;
+    max-width: 40rem;
+    margin: 0.5rem auto;
 }
 
-
-
 .container-item{
-    border: 1px solid #641fa4;
-    border-radius: 5px;
+    border: 0.1rem solid #641fa4;
+    border-radius: 0.5rem;
 }
 
 .text{
     display: none;
-    font-size: 14px;
-    padding: 10px 15px;
 }
-
-/* #text4{ 
-    display: block;
-}
-#title4{
-    background-color: rgb(198, 135, 204);
-} */
 
 .title{
-    position: relative;
-    display: block;
+    display: grid;
+    grid-template-columns: 15fr 1fr;
     cursor: pointer;
     color: #fff;
-    padding: 10px 15px;
+    padding: 0.5rem;
+    transform: translateY(-40%);
 }
-
 
 
 #plus, #cross{ 
     display: none;
-    position: absolute;
-    right: 5%;
-    top: 50%;
-    transform: translateY(-50%);
+     transform: translateY(+10%); 
 }
 
 .cont:hover #plus{
@@ -75,12 +173,9 @@ body{
 } 
 
 
-
 .container-input{
     appearance: none; 
-    position: absolute;
-    width: 0px;
-    height: 0px;
+
 }
 
 .title:checked #plus{
@@ -91,7 +186,6 @@ body{
     display: block;
 }
 
-
 /* HOVER OVER ITEMS STARTS */
 #container5 ~ .text{
     display: none;
@@ -99,6 +193,7 @@ body{
 #container5:hover ~ .text{
     display: block;
 }
+
 #container5:checked ~ .text{
     display: block;
 }
@@ -126,9 +221,11 @@ body{
 #container2 ~ .text{
     display: none;
 }
+
 #container2:hover ~ .text{
     display: block;
 }
+
 #container2:checked ~ .text{
     display: block;
 }
@@ -142,17 +239,23 @@ body{
 #container1:checked ~ .text{
     display: none;
 }
+#container1:checked ~ .title #plus{
+    display: block;
+}
+#container1:checked ~ .title #cross{
+    display: none;
+}
+#container1:checked ~ .title{
+    background-color: transparent;
+}
 
 /* HOVER OVER ITEMS END */
-
-
 
 .container-input:hover ~ .title{
     background-color: rgb(198, 135, 204);
 }
 .container-input:checked ~ .title{
-    background-color: rgb(45, 10, 48);
-    
+    background-color: rgb(45, 10, 48);  
 }
 
 .container-input:checked ~ .title #plus{
@@ -170,24 +273,5 @@ body{
 }
 
 
-.img1{
-    display: block;
-    margin: 0 auto;
-}
-.img2{
-    display: block;
-    margin: 0 auto;
-}
-.img3{
-    display: block;
-    margin: 0 auto;
-}
-.img4{
-    display: block;
-    margin: 0 auto;
-}
-.img5{
-    display: block;
-    margin: 0 auto;
-}
+
 

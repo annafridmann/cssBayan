@@ -276,7 +276,21 @@ h1{
 .container-input:hover ~ .title #cross{
     display: block;
 }
-
+.img1:active{
+    box-shadow: 0.5rem 0.5rem 0.2rem 0.2rem rgba(221, 44, 159, 0.2);
+}
+.img2:active{
+    box-shadow: 0.5rem 0.5rem 0.2rem 0.2rem rgba(103, 221, 44, 0.2);
+}
+.img3:active{
+    box-shadow: 0.5rem 0.5rem 0.2rem 0.2rem rgba(221, 44, 159, 0.2);
+}
+.img4:active{
+    box-shadow: 0.5rem 0.5rem 0.2rem 0.2rem rgba(221, 44, 159, 0.2);
+}
+.img5:active{
+    box-shadow: 0.5rem 0.5rem 0.2rem 0.2rem rgba(221, 44, 159, 0.2);
+}
 
 
 

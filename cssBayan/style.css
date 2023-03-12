@@ -1,0 +1,300 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 70%;
+    line-height: 1.5;
+    background-color: #e2d8ea;
+}
+h1{
+    font-size:85%;
+    padding: 0.5rem;
+}
+.img1{
+    display: block;
+    margin: 0 auto;
+    height: 70%;
+    width: 70%;
+    cursor: pointer;
+}
+.img2{
+    display: block;
+    margin: 0 auto;
+    height: 70%;
+    width: 70%;
+    cursor: pointer;
+}
+.img3{
+    display: block;
+    margin: 0 auto;
+    height: 70%;
+    width: 70%;
+    cursor: pointer;
+}
+.img4{
+    display: block;
+    margin: 0 auto;
+    height: 70%;
+    width: 70%;
+    cursor: pointer;
+}
+.img5{
+    display: block;
+    margin: 0 auto;
+    height: 70%;
+    width: 70%;
+    cursor: pointer;
+}
+
+
+@media (min-width: 51rem){
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 90%;
+        line-height: 1.5;
+        background-color: #e2d8ea;
+    }
+
+    .img1{
+        display: block;
+        margin: 0 auto;
+        size: 85%;
+    }
+    .img2{
+        display: block;
+        margin: 0 auto;
+        size: 85%;
+    }
+    .img3{
+        display: block;
+        margin: 0 auto;
+        size: 85%;
+    }
+    .img4{
+        display: block;
+        margin: 0 auto;
+        size: 85%;
+    }
+    .img5{
+        display: block;
+        margin: 0 auto;
+        size: 85%;
+    }
+    h1{
+        font-size:95%;
+        padding: 0.5rem;
+    }
+}
+
+@media (min-width: 120rem){
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 100%;
+        line-height: 1.5;
+        background-color: #ebe2f3;
+    }
+    .img1{
+        display: block;
+        margin: 0 auto;
+        size: 100%;
+    }
+    .img2{
+        display: block;
+        margin: 0 auto;
+        size: 100%;
+    }
+    .img3{
+        display: block;
+        margin: 0 auto;
+        size: 100%;
+    }
+    .img4{
+        display: block;
+        margin: 0 auto;
+        size: 100%;
+    }
+    .img5{
+        display: block;
+        margin: 0 auto;
+        size: 100%;
+    }
+    h1{
+        font-size:100%;
+        padding: 0.5rem;
+    }
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+
+}
+
+/* container style */
+
+.cont{
+    border: 0.1rem solid #fff;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container{
+    max-width: 40rem;
+    margin: 0.5rem auto;
+}
+
+.container-item{
+    border: 0.1rem solid #641fa4;
+    border-radius: 0.5rem;
+}
+
+.text{
+    display: none;
+}
+
+.title{
+    display: grid;
+    grid-template-columns: 15fr 1fr;
+    cursor: pointer;
+    color: #fff;
+    padding: 0.5rem;
+    transform: translateY(-40%);
+}
+
+
+#plus, #cross{ 
+    display: none;
+     transform: translateY(+10%); 
+}
+
+.cont:hover #plus{
+    display: block;
+}
+
+
+/* при наведении мышки добавлять цвет и плавный переход + замедление*/
+.title:hover {
+    transition: background 2s ease-out;
+    color: #641fa4;
+} 
+
+
+.container-input{
+    appearance: none; 
+
+}
+
+.title:checked #plus{
+    display: none;
+}
+
+.title:checked #cross{
+    display: block;
+}
+
+/* HOVER OVER ITEMS STARTS */
+#container5 ~ .text{
+    display: none;
+}
+#container5:hover ~ .text{
+    display: block;
+}
+
+#container5:checked ~ .text{
+    display: block;
+}
+
+#container4 ~ .text{
+    display: none;
+}
+#container4:hover ~ .text{
+    display: block;
+}
+#container4:checked ~ .text{
+    display: block;
+}
+
+#container3 ~ .text{
+    display: none;
+}
+#container3:hover ~ .text{
+    display: block;
+}
+#container3:checked ~ .text{
+    display: block;
+}
+
+#container2 ~ .text{
+    display: none;
+}
+
+#container2:hover ~ .text{
+    display: block;
+}
+
+#container2:checked ~ .text{
+    display: block;
+}
+
+#container1 ~ .text{
+    display: block;
+}
+#container1:hover ~ .text{
+    display: block;
+}
+#container1:checked ~ .text{
+    display: none;
+}
+#container1:checked ~ .title #plus{
+    display: block;
+}
+#container1:checked ~ .title #cross{
+    display: none;
+}
+#container1:checked ~ .title{
+    background-color: transparent;
+}
+
+/* HOVER OVER ITEMS END */
+
+.container-input:hover ~ .title{
+    background-color: rgb(198, 135, 204);
+}
+.container-input:checked ~ .title{
+    background-color: rgb(45, 10, 48);  
+}
+
+.container-input:checked ~ .title #plus{
+    display: none;
+}
+.container-input:checked ~ .title #cross{
+    display: block;
+}
+
+.container-input:hover ~ .title #plus{
+    display: none;
+}
+.container-input:hover ~ .title #cross{
+    display: block;
+}
+#container1:checked:hover ~ .text {
+    display: block;
+}
+
+.img1:active{
+    box-shadow: 0.5rem 0.5rem 0.2rem 0.2rem rgba(221, 44, 159, 0.2);
+}
+.img2:active{
+    box-shadow: 0.5rem 0.5rem 0.2rem 0.2rem rgba(103, 221, 44, 0.2);
+}
+.img3:active{
+    box-shadow: 0.5rem 0.5rem 0.2rem 0.2rem rgba(44, 47, 221, 0.2);
+}
+.img4:active{
+    box-shadow: 0.5rem 0.5rem 0.2rem 0.2rem rgba(221, 153, 44, 0.2);
+}
+.img5:active{
+    box-shadow: 0.5rem 0.5rem 0.2rem 0.2rem rgba(221, 44, 44, 0.2);
+}
+
+
+
